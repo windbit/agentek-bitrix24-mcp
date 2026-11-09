@@ -1,37 +1,40 @@
 {
-  "name": "bitrix24-mcp",
-  "version": "2.0.0",
-  "description": "MCP server for Bitrix24 — connect Claude to your CRM, tasks, disk, calendar, and more via an incoming webhook.",
-  "main": "index.js",
+  "name": "agentek-bitrix24-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Bitrix24 over an incoming webhook: CRM, tasks, products, calendar, drive, messenger",
   "type": "module",
+  "bin": {
+    "agentek-bitrix24-mcp": "index.js"
+  },
+  "files": [
+    "index.js",
+    "src"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --test test/*.test.js"
   },
   "keywords": [
     "mcp",
     "bitrix24",
-    "claude",
     "crm",
-    "model-context-protocol",
-    "anthropic",
-    "ai"
+    "model-context-protocol"
   ],
-  "author": "Bit2Beat <info@bit2beat.com> (https://bit2beat.com)",
+  "author": "Agentek",
   "license": "MIT",
-  "homepage": "https://github.com/bit2beat/bitrix24-mcp#readme",
+  "homepage": "https://github.com/windbit/agentek-bitrix24-mcp#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bit2beat/bitrix24-mcp.git"
+    "url": "git+https://github.com/windbit/agentek-bitrix24-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/bit2beat/bitrix24-mcp/issues"
+    "url": "https://github.com/windbit/agentek-bitrix24-mcp/issues"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
-    "axios": "^1.7.0",
-    "zod": "^3.23.0"
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.25.76"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   }
 }
